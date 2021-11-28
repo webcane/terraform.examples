@@ -45,3 +45,8 @@ resource "aws_security_group" "sg-example" {
     "Name"   = "terraform-sg-example"
   }
 }
+
+output "public_ip" {
+  value = aws_instance.ami-example.public_ip
+  description = "The public IP address of the web server"
+}
